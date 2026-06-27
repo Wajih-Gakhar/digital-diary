@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+	<class>AddEntryDialog</class>
+	<widget class="QDialog" name="AddEntryDialog">
+		<property name="geometry">
+			<rect>
+				<x>0</x>
+				<y>0</y>
+				<width>600</width>
+				<height>550</height>
+			</rect>
+		</property>
+		<property name="windowTitle">
+			<string>✨ Add Diary Entry</string>
+		</property>
+		<layout class="QVBoxLayout" name="verticalLayout">
+			<property name="spacing">
+				<number>15</number>
+			</property>
+			<property name="leftMargin">
+				<number>25</number>
+			</property>
+			<property name="topMargin">
+				<number>25</number>
+			</property>
+			<property name="rightMargin">
+				<number>25</number>
+			</property>
+			<property name="bottomMargin">
+				<number>25</number>
+			</property>
+
+			<item>
+				<widget class="QLabel" name="lblDialogTitle">
+					<property name="text">
+						<string>📝 Create New Entry</string>
+					</property>
+					<property name="styleSheet">
+						<string notr="true">font-size:20px; font-weight:bold; color:#4A148C; padding:5px;</string>
+					</property>
+				</widget>
+			</item>
+
+			<item>
+				<layout class="QFormLayout" name="formLayout">
+					<property name="horizontalSpacing">
+						<number>15</number>
+					</property>
+					<property name="verticalSpacing">
+						<number>12</number>
+					</property>
+
+					<item row="0" column="0">
+						<widget class="QLabel" name="labelTitle">
+							<property name="text">
+								<string>Title:</string>
+							</property>
+							<property name="styleSheet">
+								<string notr="true">font-weight:600; font-size:14px;</string>
+							</property>
+						</widget>
+					</item>
+					<item row="0" column="1">
+						<widget class="QLineEdit" name="txtTitle">
+							<property name="placeholderText">
+								<string>Enter a title for your entry...</string>
+							</property>
+							<property name="minimumHeight">
+								<number>40</number>
+							</property>
+						</widget>
+					</item>
+
+					<item row="1" column="0">
+						<widget class="QLabel" name="labelDate">
+							<property name="text">
+								<string>Date:</string>
+							</property>
+							<property name="styleSheet">
+								<string notr="true">font-weight:600; font-size:14px;</string>
+							</property>
+						</widget>
+					</item>
+					<item row="1" column="1">
+						<widget class="QCalendarWidget" name="calendar">
+							<property name="minimumSize">
+								<size>
+									<width>0</width>
+									<height>200</height>
+								</size>
+							</property>
+						</widget>
+					</item>
+
+					<item row="2" column="0">
+						<widget class="QLabel" name="labelTime">
+							<property name="text">
+								<string>Time:</string>
+							</property>
+							<property name="styleSheet">
+								<string notr="true">font-weight:600; font-size:14px;</string>
+							</property>
+						</widget>
+					</item>
+					<item row="2" column="1">
+						<layout class="QHBoxLayout" name="timeLayout">
+							<item>
+								<widget class="QSpinBox" name="spinHour">
+									<property name="minimumHeight">
+										<number>35</number>
+									</property>
+									<property name="minimum">
+										<number>1</number>
+									</property>
+									<property name="maximum">
+										<number>12</number>
+									</property>
+									<property name="value">
+										<number>12</number>
+									</property>
+									<property name="alignment">
+										<set>Qt::AlignCenter</set>
+									</property>
+								</widget>
+							</item>
+							<item>
+								<widget class="QLabel" name="lblColon">
+									<property name="text">
+										<string>:</string>
+									</property>
+									<property name="alignment">
+										<set>Qt::AlignCenter</set>
+									</property>
+									<property name="styleSheet">
+										<string notr="true">font-size:18px; font-weight:bold;</string>
+									</property>
+								</widget>
+							</item>
+							<item>
+								<widget class="QSpinBox" name="spinMinute">
+									<property name="minimumHeight">
+										<number>35</number>
+									</property>
+									<property name="minimum">
+										<number>0</number>
+									</property>
+									<property name="maximum">
+										<number>59</number>
+									</property>
+									<property name="value">
+										<number>0</number>
+									</property>
+									<property name="alignment">
+										<set>Qt::AlignCenter</set>
+									</property>
+								</widget>
+							</item>
+							<item>
+								<widget class="QComboBox" name="cmbAMPM">
+									<property name="minimumHeight">
+										<number>35</number>
+									</property>
+									<item>
+										<property name="text">
+											<string>AM</string>
+										</property>
+									</item>
+									<item>
+										<property name="text">
+											<string>PM</string>
+										</property>
+									</item>
+								</widget>
+							</item>
+						</layout>
+					</item>
+
+					<item row="3" column="0">
+						<widget class="QLabel" name="labelCategory">
+							<property name="text">
+								<string>Category:</string>
+							</property>
+							<property name="styleSheet">
+								<string notr="true">font-weight:600; font-size:14px;</string>
+							</property>
+						</widget>
+					</item>
+					<item row="3" column="1">
+						<widget class="QComboBox" name="cmbCategory">
+							<property name="minimumHeight">
+								<number>35</number>
+							</property>
+						</widget>
+					</item>
+
+					<item row="4" column="0">
+						<widget class="QLabel" name="labelContent">
+							<property name="text">
+								<string>Content:</string>
+							</property>
+							<property name="styleSheet">
+								<string notr="true">font-weight:600; font-size:14px;</string>
+							</property>
+							<property name="alignment">
+								<set>Qt::AlignTop</set>
+							</property>
+						</widget>
+					</item>
+					<item row="4" column="1">
+						<widget class="QTextEdit" name="txtContent">
+							<property name="minimumSize">
+								<size>
+									<width>0</width>
+									<height>120</height>
+								</size>
+							</property>
+							<property name="placeholderText">
+								<string>Write your thoughts here...</string>
+							</property>
+						</widget>
+					</item>
+				</layout>
+			</item>
+
+			<item>
+				<layout class="QHBoxLayout" name="buttonLayout">
+					<property name="spacing">
+						<number>10</number>
+					</property>
+					<item>
+						<spacer name="spacer1">
+							<property name="orientation">
+								<enum>Qt::Horizontal</enum>
+							</property>
+							<property name="sizeHint" stdset="0">
+								<size>
+									<width>40</width>
+									<height>20</height>
+								</size>
+							</property>
+						</spacer>
+					</item>
+					<item>
+						<widget class="QPushButton" name="btnCancel">
+							<property name="text">
+								<string>❌ Cancel</string>
+							</property>
+							<property name="minimumSize">
+								<size>
+									<width>110</width>
+									<height>40</height>
+								</size>
+							</property>
+							<property name="styleSheet">
+								<string notr="true">
+									background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+									stop:0 #CCCCCC, stop:1 #999999);
+								</string>
+							</property>
+						</widget>
+					</item>
+					<item>
+						<widget class="QPushButton" name="btnSave">
+							<property name="text">
+								<string>💾 Save Entry</string>
+							</property>
+							<property name="minimumSize">
+								<size>
+									<width>130</width>
+									<height>40</height>
+								</size>
+							</property>
+						</widget>
+					</item>
+				</layout>
+			</item>
+		</layout>
+	</widget>
+	<resources/>
+	<connections/>
+</ui>

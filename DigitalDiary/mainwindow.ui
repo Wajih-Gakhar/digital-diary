@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+	<class>MainWindow</class>
+	<widget class="QMainWindow" name="MainWindow">
+		<property name="geometry">
+			<rect>
+				<x>0</x>
+				<y>0</y>
+				<width>1920</width>
+				<height>1080</height>
+			</rect>
+		</property>
+		<property name="windowTitle">
+			<string>My Digital Diary 💝</string>
+		</property>
+		<widget class="QWidget" name="centralwidget">
+			<layout class="QVBoxLayout" name="mainVerticalLayout">
+				<property name="spacing">
+					<number>0</number>
+				</property>
+				<property name="leftMargin">
+					<number>0</number>
+				</property>
+				<property name="topMargin">
+					<number>0</number>
+				</property>
+				<property name="rightMargin">
+					<number>0</number>
+				</property>
+				<property name="bottomMargin">
+					<number>0</number>
+				</property>
+
+				<item>
+					<widget class="QWidget" name="mainArea">
+						<layout class="QVBoxLayout" name="vboxMain">
+							<property name="spacing">
+								<number>12</number>
+							</property>
+							<property name="leftMargin">
+								<number>20</number>
+							</property>
+							<property name="topMargin">
+								<number>15</number>
+							</property>
+							<property name="rightMargin">
+								<number>20</number>
+							</property>
+							<property name="bottomMargin">
+								<number>15</number>
+							</property>
+
+							<!-- Header with menu -->
+							<item>
+								<widget class="QWidget" name="headerWidget">
+									<property name="minimumSize">
+										<size>
+											<width>0</width>
+											<height>60</height>
+										</size>
+									</property>
+									<layout class="QHBoxLayout" name="headerLayout">
+										<property name="spacing">
+											<number>15</number>
+										</property>
+										<item>
+											<widget class="QPushButton" name="btnMenu">
+												<property name="text">
+													<string>☰</string>
+												</property>
+												<property name="minimumSize">
+													<size>
+														<width>45</width>
+														<height>45</height>
+													</size>
+												</property>
+												<property name="maximumSize">
+													<size>
+														<width>45</width>
+														<height>45</height>
+													</size>
+												</property>
+												<property name="font">
+													<font>
+														<pointsize>18</pointsize>
+													</font>
+												</property>
+											</widget>
+										</item>
+										<item>
+											<widget class="QLabel" name="lblHeader">
+												<property name="text">
+													<string>✨ My Diary</string>
+												</property>
+												<property name="styleSheet">
+													<string notr="true">font-size:26px; font-weight:700; color:#2D1B4E;</string>
+												</property>
+											</widget>
+										</item>
+										<item>
+											<spacer name="hspacer">
+												<property name="orientation">
+													<enum>Qt::Horizontal</enum>
+												</property>
+												<property name="sizeHint" stdset="0">
+													<size>
+														<width>40</width>
+														<height>20</height>
+													</size>
+												</property>
+											</spacer>
+										</item>
+										<item>
+											<widget class="QLineEdit" name="txtSearch">
+												<property name="placeholderText">
+													<string>🔍 Search entries...</string>
+												</property>
+												<property name="minimumSize">
+													<size>
+														<width>250</width>
+														<height>40</height>
+													</size>
+												</property>
+												<property name="maximumSize">
+													<size>
+														<width>350</width>
+														<height>40</height>
+													</size>
+												</property>
+											</widget>
+										</item>
+										<item>
+											<widget class="QPushButton" name="btnSearch">
+												<property name="text">
+													<string>Search</string>
+												</property>
+												<property name="minimumSize">
+													<size>
+														<width>90</width>
+														<height>40</height>
+													</size>
+												</property>
+											</widget>
+										</item>
+									</layout>
+								</widget>
+							</item>
+
+							<!-- Table -->
+							<item>
+								<widget class="QTableWidget" name="tableDiary">
+									<property name="minimumSize">
+										<size>
+											<width>700</width>
+											<height>420</height>
+										</size>
+									</property>
+									<property name="alternatingRowColors">
+										<bool>true</bool>
+									</property>
+									<property name="selectionMode">
+										<enum>QAbstractItemView::SingleSelection</enum>
+									</property>
+									<property name="selectionBehavior">
+										<enum>QAbstractItemView::SelectRows</enum>
+									</property>
+								</widget>
+							</item>
+
+							<!-- Controls -->
+							<item>
+								<widget class="QWidget" name="controlsWidget">
+									<property name="minimumSize">
+										<size>
+											<width>0</width>
+											<height>60</height>
+										</size>
+									</property>
+									<layout class="QHBoxLayout" name="controlsLayout">
+										<property name="spacing">
+											<number>10</number>
+										</property>
+										<item>
+											<widget class="QPushButton" name="btnAdd">
+												<property name="text">
+													<string>➕ Add Entry</string>
+												</property>
+												<property name="minimumSize">
+													<size>
+														<width>120</width>
+														<height>45</height>
+													</size>
+												</property>
+											</widget>
+										</item>
+										<item>
+											<widget class="QPushButton" name="btnEdit">
+												<property name="text">
+													<string>✏️ Edit</string>
+												</property>
+												<property name="minimumSize">
+													<size>
+														<width>100</width>
+														<height>45</height>
+													</size>
+												</property>
+											</widget>
+										</item>
+										<item>
+											<widget class="QPushButton" name="btnDelete">
+												<property name="text">
+													<string>🗑️ Delete</string>
+												</property>
+												<property name="minimumSize">
+													<size>
+														<width>100</width>
+														<height>45</height>
+													</size>
+												</property>
+											</widget>
+										</item>
+										<item>
+											<widget class="QPushButton" name="btnSave">
+												<property name="text">
+													<string>💾 Save</string>
+												</property>
+												<property name="minimumSize">
+													<size>
+														<width>100</width>
+														<height>45</height>
+													</size>
+												</property>
+											</widget>
+										</item>
+										<item>
+											<widget class="QPushButton" name="btnLoad">
+												<property name="text">
+													<string>📂 Load</string>
+												</property>
+												<property name="minimumSize">
+													<size>
+														<width>100</width>
+														<height>45</height>
+													</size>
+												</property>
+											</widget>
+										</item>
+										<item>
+											<spacer name="hspacer2">
+												<property name="orientation">
+													<enum>Qt::Horizontal</enum>
+												</property>
+												<property name="sizeHint" stdset="0">
+													<size>
+														<width>40</width>
+														<height>20</height>
+													</size>
+												</property>
+											</spacer>
+										</item>
+									</layout>
+								</widget>
+							</item>
+						</layout>
+					</widget>
+				</item>
+			</layout>
+
+			<!-- Sidebar overlay -->
+			<widget class="QFrame" name="sidebar">
+				<property name="geometry">
+					<rect>
+						<x>-250</x>
+						<y>0</y>
+						<width>250</width>
+						<height>700</height>
+					</rect>
+				</property>
+				<property name="styleSheet">
+					<string notr="true">
+						QFrame#sidebar {
+						background: qlineargradient(x1:0,y1:0,x2:0,y2:1,
+						stop:0 rgba(209,107,165,0.98),
+						stop:0.5 rgba(186,125,198,0.98),
+						stop:1 rgba(142,197,252,0.98));
+						border-right: 3px solid rgba(255,255,255,0.3);
+						}
+						QPushButton {
+						background: transparent;
+						color: white;
+						border: none;
+						text-align: left;
+						padding: 15px 20px;
+						font-size: 15px;
+						font-weight: 500;
+						}
+						QPushButton:hover {
+						background: rgba(255,255,255,0.15);
+						border-left: 4px solid white;
+						}
+					</string>
+				</property>
+				<layout class="QVBoxLayout" name="sidebarLayout">
+					<property name="spacing">
+						<number>5</number>
+					</property>
+					<property name="leftMargin">
+						<number>0</number>
+					</property>
+					<property name="topMargin">
+						<number>20</number>
+					</property>
+					<property name="rightMargin">
+						<number>0</number>
+					</property>
+					<property name="bottomMargin">
+						<number>20</number>
+					</property>
+					<item>
+						<widget class="QLabel" name="lblBrand">
+							<property name="text">
+								<string>📖 My Diary</string>
+							</property>
+							<property name="alignment">
+								<set>Qt::AlignCenter</set>
+							</property>
+							<property name="styleSheet">
+								<string notr="true">font-weight:bold; font-size:22px; color:white; padding:15px;</string>
+							</property>
+						</widget>
+					</item>
+					<item>
+						<widget class="Line" name="line">
+							<property name="styleSheet">
+								<string notr="true">background: rgba(255,255,255,0.3);</string>
+							</property>
+							<property name="frameShadow">
+								<enum>QFrame::Plain</enum>
+							</property>
+							<property name="orientation">
+								<enum>Qt::Horizontal</enum>
+							</property>
+						</widget>
+					</item>
+					<item>
+						<widget class="QPushButton" name="btnHome">
+							<property name="text">
+								<string>🏠  Home</string>
+							</property>
+							<property name="minimumHeight">
+								<number>50</number>
+							</property>
+						</widget>
+					</item>
+					<item>
+						<widget class="QPushButton" name="btnAddSide">
+							<property name="text">
+								<string>➕  Add Entry</string>
+							</property>
+							<property name="minimumHeight">
+								<number>50</number>
+							</property>
+						</widget>
+					</item>
+					<item>
+						<widget class="QPushButton" name="btnCalendarSide">
+							<property name="text">
+								<string>📅  Calendar</string>
+							</property>
+							<property name="minimumHeight">
+								<number>50</number>
+							</property>
+						</widget>
+					</item>
+					<item>
+						<widget class="QPushButton" name="btnCategoriesSide">
+							<property name="text">
+								<string>📚  Categories</string>
+							</property>
+							<property name="minimumHeight">
+								<number>50</number>
+							</property>
+						</widget>
+					</item>
+					<item>
+						<spacer name="vspacer">
+							<property name="orientation">
+								<enum>Qt::Vertical</enum>
+							</property>
+							<property name="sizeHint" stdset="0">
+								<size>
+									<width>20</width>
+									<height>40</height>
+								</size>
+							</property>
+						</spacer>
+					</item>
+					<item>
+						<widget class="QLabel" name="lblFooter">
+							<property name="text">
+								<string>Made with VS+QT Tools 💝</string>
+							</property>
+							<property name="alignment">
+								<set>Qt::AlignCenter</set>
+							</property>
+							<property name="styleSheet">
+								<string notr="true">color:rgba(255,255,255,0.7); font-size:12px; padding:10px;</string>
+							</property>
+						</widget>
+					</item>
+				</layout>
+			</widget>
+
+			<!-- Floating Action Button -->
+			<widget class="QPushButton" name="btnFAB">
+				<property name="geometry">
+					<rect>
+						<x>1120</x>
+						<y>620</y>
+						<width>60</width>
+						<height>60</height>
+					</rect>
+				</property>
+				<property name="text">
+					<string>+</string>
+				</property>
+				<property name="font">
+					<font>
+						<pointsize>24</pointsize>
+						<weight>75</weight>
+						<bold>true</bold>
+					</font>
+				</property>
+			</widget>
+
+		</widget>
+	</widget>
+
+	<resources/>
+	<connections/>
+</ui>

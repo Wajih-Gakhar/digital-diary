@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>modern_diary.qss</file>
+        <file>fonts/ComicNeue-Bold.ttf</file>
+        <file>fonts/ComicNeue-BoldItalic.ttf</file>
+        <file>fonts/ComicNeue-Italic.ttf</file>
+        <file>fonts/ComicNeue-Light.ttf</file>
+        <file>fonts/ComicNeue-LightItalic.ttf</file>
+        <file>fonts/ComicNeue-Regular.ttf</file>
+        <file>fonts/Quicksand-Bold.ttf</file>
+        <file>fonts/Quicksand-Light.ttf</file>
+        <file>fonts/Quicksand-Medium.ttf</file>
+        <file>fonts/Quicksand-Regular.ttf</file>
+        <file>fonts/Quicksand-SemiBold.ttf</file>
+        <file>images/diary_background.png</file>
+    </qresource>
+</RCC>
